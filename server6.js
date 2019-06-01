@@ -52,11 +52,7 @@ app.get("/api/characters", function(req, res) {
   return res.json(characters);
 });
 
-app.post("/add", function (req, res) { 
 
-  var
-
-})
 // Displays a single character, or returns false
 app.get("/api/characters/:character", function(req, res) {
   var chosen = req.params.character;
@@ -73,7 +69,7 @@ app.get("/api/characters/:character", function(req, res) {
 });
 
 // Create New Characters - takes in JSON input
-app.post("/api/characters", function(req, res) {
+app.post("/api/add", function(req, res) {
   // req.body hosts is equal to the JSON post sent from the user
   // This works because of our body parsing middleware
   var newcharacter = req.body;
